@@ -539,7 +539,7 @@ EOT;
 			if ($value->visibility == "hide") {
 				continue;
 			}
-			$output .= '<li' . (wCMS::$currentPage === $value->slug ? ' class="active"' : '') . '><a href="' . wCMS::url($value->slug) . '">' . $value->name . '</a></li>';
+			$output .= '<li' . (wCMS::$currentPage === $value->slug ? ' class="active"' : ' class="nav-item"') . '><a href="' . wCMS::url($value->slug) . '">' . $value->name . '</a></li>';
 		}
 		return wCMS::hook('menu', $output)[0];
 	}
